@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <main id="">
+        <div class="wrapper">
+            <h1 id="title">Medical History Form</h1>
+            <p id="description">
+                A medical history form is a questionnaire used by health care providers to collect
+                information about the patient’s medical history during a medical or physical examination.
+            </p>
+            <form action="" id="survey-form">
+                <div class="form-div">
+                    <label for="name" id="name-label">Name</label>
+                    <input type="text" id="name" required placeholder="Jake">
+                </div>
+                <div class="form-div">
+                    <label for="email" id="email-label">Email Address</label>
+                    <input type="email" id="email" required placeholder="test@email.com">
+                </div>
+                <div class="form-div">
+                    <label for="number" id="number-label">What is your age?</label>
+                    <input type="number" id="number" min="0" max="100" placeholder="ex: 25">
+                </div>
+                <div class="form-div">
+                    <label for="dropdown">What is your gender?</label>
+                    <select name="dropdown" id="dropdown">
+                        <option disabled="" selected="" value="">Please Select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="form-div">
+                    <label for="prefer">Check the symptoms that you' re currently experiencing:</label>
+                    <label>
+                        <input name="prefer" value="chest-pain" type="checkbox" class="input-checkbox">
+                        Chest pain
+                    </label>
+                    <label>
+                        <input name="prefer" value="hematological" type="checkbox" class="input-checkbox">
+                        Hematological
+                    </label>
+                    <label>
+                        <input name="prefer" value="gastrointestinal" type="checkbox" class="input-checkbox">
+                        Gastrointestinal
+                    </label>
+                    <label>
+                        <input name="prefer" value="weight-gain" type="checkbox" class="input-checkbox">
+                        Weight gain
+                    </label>
+                    <label>
+                        <input name="prefer" value="psychiatric" type="checkbox" class="input-checkbox">
+                        Psychiatric
+                    </label>
+                    <label>
+                        <input name="prefer" value="lymphatic" type="checkbox" class="input-checkbox">
+                        Lymphatic
+                    </label>
+                    <label>
+                        <input name="prefer" value="respiratory" type="checkbox" class="input-checkbox">
+                        Respiratory
+                    </label>
+                </div>
+                <div class="form-div">
+                    <label for="user-question">Are you currently taking any medication?</label>
+                    <label>
+                        <input name="user-question" value="yes" type="radio" class="input-radio" checked="">
+                        Yes
+                    </label>
+                    <label>
+                        <input name="user-question" value="no" type="radio" class="input-radio">
+                        No
+                    </label>
+                </div>
+                <div class="form-div">
+                    <label for="text-area">Please list them.</label>
+                    <textarea name="text-area" id="text-area" cols="30" rows="10"></textarea>
+                </div>
+                <div class="form-div">
+                    <input type="submit" value="Submit" id="submit">
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
