@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Product Landing Page</title>
+</head>
+
+<body>
+    <header id="header">
+        <img src="https://cdn.icon-icons.com/icons2/3626/PNG/512/online_buy_ecommerce_cart_bag_shopping_icon_227304.png"
+            alt="logo" id="header-img" class="logo">
+        <nav id="nav-bar">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#form" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+                <li class="nav-item"><a href="#which-case" class="nav-link">Which Case</a></li>
+                <li class="nav-item"><a href="#pricing" class="nav-link">Pricing</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <form action="https://www.freecodecamp.com/email-submit" id="form">
+            <label for="email">Pre-order Case</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email adress">
+            <input type="submit" value="Pre-Order" id="submit">
+        </form>
+        <img src="https://images.unsplash.com/flagged/photo-1594344141311-8ea00ba55612?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+            alt="phone case" class="caseImage">
+        <div class="group-div" id="features">
+            <h3>Description:</h3>
+            <p class="description">
+                Our less is more case. A super-thin body and soft-to-the-touch texture bring the best features to
+                our
+                first line of cases made using partially biodegradable materials. Its NEW M-Series lens interface is
+                improved with three locating points to prevent the mount from rotating in the case when you attach a
+                lens. Plus a refined lens fit, so it's easier to install a lens with less effort.
+            </p>
+            <h3>Features:</h3>
+            <div class="features" id="pricing">
+                <ul>
+                    <li>Qi Wireless Charging Compatible (including MagSafe chargers).</li>
+                    <li>Ships in 100% post-consumer recycled packaging.</li>
+                    <li>Wrist/neck strap attachment on iPhone 12 models only.</li>
+                </ul>
+                <ul>
+                    <li>Bio-Plastic TPU Body is compostable after removing select parts.</li>
+                    <li>Super Thin: 1.5mm (2mm on the new iPhone 12 models).</li>
+                    <li>6-foot Drop Test Approved (tested on hardwood from all angles).</li>
+                </ul>
+            </div>
+        </div>
+        <div class="group-div" id="order">
+            <div>
+                <h3>Small</h3>
+                <ul>
+                    <li>Lorem, ipsum.</li>
+                    <li>Vel, consequuntur at!</li>
+                    <li>Asperiores, ea molestias.</li>
+                </ul>
+                <button>Select</button>
+            </div>
+            <div>
+                <h3>Medium</h3>
+                <ul>
+                    <li>Lorem, ipsum.</li>
+                    <li>Iure, magni deserunt.</li>
+                    <li>Facilis, culpa hic!</li>
+                </ul>
+                <button>Select</button>
+            </div>
+            <div>
+                <h3>Large</h3>
+                <ul>
+                    <li>Lorem, ipsum.</li>
+                    <li>Recusandae, possimus aperiam.</li>
+                    <li>Dolorem, assumenda qui.</li>
+                </ul>
+                <button>Select</button>
+            </div>
+        </div>
+        <div class="group-div" id="which-case">
+            <h3>Which Case ?</h3>
+            <iframe src="https://www.youtube.com/embed/tyDryBXOyyU" frameborder="0" id="video"></iframe>
+        </div>
+    </main>
+    <footer id="footer">
+        <small>Copyright 2022</small>
+    </footer>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+        const navLink = document.querySelectorAll(".nav-link");
+
+        hamburger.addEventListener("click", mobileMenu);
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+    </script>
+</body>
+
+</html>
