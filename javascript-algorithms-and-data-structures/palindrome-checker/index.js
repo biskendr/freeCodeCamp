@@ -10,4 +10,4 @@ function palindrome(str) {
     return true;
 }
 
-palindrome("eybiribye");
+console.log(palindrome("eybiribye"));
