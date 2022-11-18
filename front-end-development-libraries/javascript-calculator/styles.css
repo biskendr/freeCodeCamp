@@ -1,0 +1,84 @@
+body {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-color: lightcoral;
+}
+
+.container {
+  width: 500px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(100px, auto);
+  grid-template-areas:
+    "disp disp  disp disp"
+    "ac ac ac op"
+    "digit digit digit op"
+    "digit digit digit op"
+    "digit digit digit op"
+    "zero zero decimal equals";
+}
+
+.cell {
+  border: 1px solid #ccc;
+  text-align: center;
+  background: #333;
+  color: #fff;
+}
+
+.digits {
+  grid-area: digit;
+  display: grid;
+  grid-template-columns: repeat(3, calc(100% / 3));
+  margin: 0;
+}
+
+.operations {
+  grid-area: op;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.display {
+  grid-area: disp;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border: 2px solid #c1c1c1;
+  border-bottom: none;
+  text-align: right;
+  padding: 0 0.5em;
+  font-size: 1.5rem;
+  background: white;
+}
+
+#decimal {
+  grid-area: decimal;
+}
+
+#clear {
+  grid-area: ac;
+}
+
+#equals {
+  grid-area: equals;
+}
+
+#zero {
+  grid-area: zero;
+}
+
+.cell,
+.digits,
+.operations,
+#zero,
+#equals,
+#clear,
+#decimal {
+  cursor: pointer;
+  font-size: 1.25rem;
+}
