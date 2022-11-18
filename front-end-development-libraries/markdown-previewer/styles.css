@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+}
+h1 {
+  text-align: center;
+  padding: 3em;
+}
+#wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#editor {
+  font-size: 1.25em;
+  height: 50em;
+  padding: 3em;
+}
+
+#preview {
+  width: 30%;
+  font-size: 1.25em;
+  padding: 3em;
+  background-color: beige;
+}
+
+#preview img {
+  width: 50%;
+}
+
+#preview > * {
+  padding: 0.25em 0;
+}
